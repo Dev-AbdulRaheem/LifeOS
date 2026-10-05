@@ -1,0 +1,61 @@
+import { subtractDays } from '../utils/dateUtils';
+
+export function generateMockNotes() {
+  return [
+    {
+      id: crypto.randomUUID(),
+      title: 'React Best Practices',
+      content: '## Key Takeaways\n\n- Use functional components with hooks\n- Keep components small and focused\n- Lift state up when needed\n- Use context for global state\n- Memoize expensive computations\n- Always clean up effects\n\n### Custom Hooks\nExtract reusable logic into custom hooks. Name them with `use` prefix.',
+      category: 'Learning',
+      tags: ['react', 'javascript', 'frontend'],
+      isPinned: true,
+      isArchived: false,
+      createdAt: subtractDays(new Date(), 14).toISOString(),
+      updatedAt: subtractDays(new Date(), 2).toISOString(),
+    },
+    {
+      id: crypto.randomUUID(),
+      title: 'Meeting Notes - Project Kickoff',
+      content: '## Project Alpha Kickoff\n\n**Date:** Last Monday\n**Attendees:** Team leads\n\n### Action Items\n- [ ] Set up project repository\n- [ ] Create initial wireframes\n- [ ] Schedule weekly standups\n- [x] Define tech stack\n\n### Decisions\n- Using React + Node.js\n- 2-week sprint cycles\n- Launch target: Q1 next year',
+      category: 'Work',
+      tags: ['meeting', 'project'],
+      isPinned: true,
+      isArchived: false,
+      createdAt: subtractDays(new Date(), 7).toISOString(),
+      updatedAt: subtractDays(new Date(), 7).toISOString(),
+    },
+    {
+      id: crypto.randomUUID(),
+      title: 'Workout Plan',
+      content: '## Weekly Schedule\n\n- **Monday:** Chest + Triceps\n- **Tuesday:** Back + Biceps\n- **Wednesday:** Rest / Light Cardio\n- **Thursday:** Shoulders + Abs\n- **Friday:** Legs\n- **Saturday:** Full Body HIIT\n- **Sunday:** Rest\n\nRemember: Progressive overload is key!',
+      category: 'Health',
+      tags: ['fitness', 'health'],
+      isPinned: false,
+      isArchived: false,
+      createdAt: subtractDays(new Date(), 21).toISOString(),
+      updatedAt: subtractDays(new Date(), 5).toISOString(),
+    },
+    {
+      id: crypto.randomUUID(),
+      title: 'Book Recommendations',
+      content: '## Must Read\n\n1. **Clean Code** by Robert C. Martin\n2. **The Pragmatic Programmer** by Hunt & Thomas\n3. **Atomic Habits** by James Clear\n4. **Deep Work** by Cal Newport\n5. **System Design Interview** by Alex Xu\n\n## Currently Reading\n- Designing Data-Intensive Applications',
+      category: 'Personal',
+      tags: ['books', 'reading'],
+      isPinned: false,
+      isArchived: false,
+      createdAt: subtractDays(new Date(), 30).toISOString(),
+      updatedAt: subtractDays(new Date(), 10).toISOString(),
+    },
+    {
+      id: crypto.randomUUID(),
+      title: 'API Design Notes',
+      content: '## REST API Best Practices\n\n- Use nouns for endpoints\n- HTTP methods for actions\n- Version your API (v1, v2)\n- Use proper status codes\n- Implement pagination\n- Rate limiting\n- Authentication with JWT',
+      category: 'Learning',
+      tags: ['api', 'backend'],
+      isPinned: false,
+      isArchived: true,
+      createdAt: subtractDays(new Date(), 45).toISOString(),
+      updatedAt: subtractDays(new Date(), 30).toISOString(),
+    },
+  ];
+}
